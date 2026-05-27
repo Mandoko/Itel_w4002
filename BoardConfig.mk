@@ -113,7 +113,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_RESETPROP := true 
 
 # Ensure software-based crypto routines are retained in recovery
-TW_CRYPTO_USE_SYSTEM_VOLD := true
+#TW_CRYPTO_USE_SYSTEM_VOLD := true
 
 # Instruct TWRP to dynamically launch Keystore/Keymaster/Gatekeeper
 TW_SUPPORT_KEYMASTER_VER := 4
