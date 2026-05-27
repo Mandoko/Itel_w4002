@@ -63,6 +63,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 36700160
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 36700160
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
+BOARD_USES_METADATA_PARTITION := true
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
@@ -104,5 +105,16 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_DEVICE_VERSION := built by @TNR 
 
-  
-  
+# Enable Decryption Support
+TW_INCLUDE_FBE := true
+TW_INCLUDE_CRYPTO := true
+
+# Include Resetprop - for tricking keymaster/gatekeeper services
+TW_INCLUDE_RESETPROP := true 
+
+# Ensure software-based crypto routines are retained in recovery
+TW_CRYPTO_USE_SYSTEM_VOLD := true
+
+# Instruct TWRP to dynamically launch Keystore/Keymaster/Gatekeeper
+TW_SUPPORT_KEYMASTER_VER := 4
+
