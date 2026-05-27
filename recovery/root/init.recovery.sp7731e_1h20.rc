@@ -1,0 +1,20 @@
+#add for board init.rc for recovery mode
+	import /init.recovery.common.rc
+
+
+on init
+    # Ensure /vendor/lib/modules exists and is mounted (if it's a separate partition)
+    # However, if your module is *inside* the ramdisk, this path is directly available.
+    # It's good practice to ensure directories exist, even if they're in ramdisk.
+    mkdir /vendor/lib/modules 0755 root root
+
+    # Load the touchscreen kernel module
+    insmod /vendor/lib/modules/tlsc6x_ts.ko
+
+    # Optional: Check if loading was successful (for debugging)
+    # You might need a more robust way to capture dmesg
+    # write /dev/kmsg "TWRP: Attempting to load tlsc6x_ts.ko"
+    # wait /sys/class/input/event0
+    # write /dev/kmsg "TWRP: Touchscreen input device found!"
+
+#
