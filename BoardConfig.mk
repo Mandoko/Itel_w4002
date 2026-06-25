@@ -80,6 +80,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
@@ -97,6 +98,9 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
+# system properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop 
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
@@ -108,13 +112,28 @@ TW_DEVICE_VERSION := built by @TNR
 # Enable Decryption Support
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO := true
+TW_NEEDS_CHACHA_POLY := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
-# Include Resetprop - for tricking keymaster/gatekeeper services
-TW_INCLUDE_RESETPROP := true 
 
+# Mtp & debugging
+TW_HAS_MTP := true
+TW_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
+# force adb to run at startup
+TW_ALWAYS_RESET_STATUS_BAR := true
+RECOVERY_SDCARD_ON_BOOT := true
+
+
+
+
+
+
+<<<<<<< HEAD
 # Ensure software-based crypto routines are retained in recovery
 #TW_CRYPTO_USE_SYSTEM_VOLD := true
+=======
+>>>>>>> 623d108 (decryption attempt)
 
-# Instruct TWRP to dynamically launch Keystore/Keymaster/Gatekeeper
-TW_SUPPORT_KEYMASTER_VER := 4
 

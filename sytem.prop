@@ -1,0 +1,8 @@
+# properties
+ro.product.board=sp7731e_1h20
+o.product.first_api_level=29
+ro.board.platform=sp7731e
+ro.crypto.fde_algorithm=adiantum
+ro.crypto.fde_sector_size=4096
+ro.crypto.volume.contents_mode=adiantum
+ro.crypto.volume.filenames_mode=adiantum

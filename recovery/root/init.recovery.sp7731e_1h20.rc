@@ -17,4 +17,8 @@ on init
     # wait /sys/class/input/event0
     # write /dev/kmsg "TWRP: Touchscreen input device found!"
 
-#
+# vold initialization
+on property:ro.crypto.state=encrypted
+    start keystore
+    start gatekeeperd
+    start vold
