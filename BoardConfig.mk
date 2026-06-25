@@ -129,11 +129,3 @@ RECOVERY_SDCARD_ON_BOOT := true
 
 
 
-
-<<<<<<< HEAD
-# Ensure software-based crypto routines are retained in recovery
-#TW_CRYPTO_USE_SYSTEM_VOLD := true
-=======
->>>>>>> 623d108 (decryption attempt)
-
-
