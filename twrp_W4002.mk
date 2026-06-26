@@ -15,11 +15,11 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/itel/W4002/device.mk)
 
 # Force ADB debugging on and disable secure shell authorization
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.secure=0 \
-    ro.adb.secure=0 \
-    ro.debuggable=1 \
-    persist.sys.usb.config=mtp,adb
+# PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.secure=0 \
+#    ro.adb.secure=0 \
+#   ro.debuggable=1 \
+#  persist.sys.usb.config=mtp,adb
     
 # Set the target API profile to match Android 11 launch specifications
 PRODUCT_SHIPPING_API_LEVEL := 29
