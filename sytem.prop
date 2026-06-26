@@ -1,4 +1,9 @@
 # properties
+
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
 ro.product.model=W4002
 ro.product.manufacturer=itel
 ro.product.board=sp7731e_1h20
