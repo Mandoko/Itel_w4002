@@ -1,4 +1,6 @@
 # properties
+ro.product.model=W4002
+ro.product.manufacturer=itel
 ro.product.board=sp7731e_1h20
 o.product.first_api_level=29
 ro.board.platform=sp7731e
