@@ -114,7 +114,7 @@ TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO := true
 TW_NEEDS_CHACHA_POLY := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
-
+FS_ENCRYPTION_MODE_ADIANTUM := true
 
 # Mtp & debugging
 TW_HAS_MTP := true
@@ -127,13 +127,5 @@ RECOVERY_SDCARD_ON_BOOT := true
 
 
 
-
-
-
-<<<<<<< HEAD
-# Ensure software-based crypto routines are retained in recovery
-#TW_CRYPTO_USE_SYSTEM_VOLD := true
-=======
->>>>>>> 623d108 (decryption attempt)
 
 
